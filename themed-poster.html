@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Kalakari | Posters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header-section">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/urban kalakari logo.jpg" alt="Urban Kalakari Logo" class="logo-img" />
+                <span class="logo-text" onclick="window.location.href='index.html'">Urban Kalakari</span>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav-links">
+                    <li><a onclick="window.location.href='index.html'">Home</a></li>
+                    <li><a href="#posters">Themed Posters</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <button id="darkModeToggle" class="btn">🌙</button>
+                    <div class="cart-icon-container" id="cartIcon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-counter" id="cart-count">0</span>
+                    </div>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="posters" class="section-posters">
+        <div class="content">
+            <h2> </h2>
+            <h2>Our Collection</h2>
+            <div class="poster-grid">
+                <div class="poster-card">
+                    <img src="img/shinchan.jpg" alt="SHINCHAN POSTER" />
+                    <div class="poster-info">
+                        <h3 class="poster-title">SHINCHAN THEMED POSTER</h3>
+                        <button class="order-btn" data-title="SHINCHAN themed POSTER" data-price="500" data-image="img/shinchan.jpg" data-description="A fun poster of Shinchan doing his classic pose.">
+                        Add to Cart
+                      </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="content">
+            <h2>Who We Are</h2>
+            <p>Urban Kalakari is a poster design brand based in India, blending culture with modern aesthetics. Each poster is a statement — crafted by artists, loved by minds that think different.</p>
+            <P>
+                Welcome to urbankalakari - Where Art Meets Soul! Greetings, artistic souls! You have stepped into a world where imagination has no limits, every color exhibits a vivid personality and every stroke of the brush narrates a new tale. At Urban Kalakar, we
+                connect digitally through remarkable artworks, tailored portraits, and themed creations that literally make hearts skip a beat. Get a glimpse of emotion through personalized portraits or themed digital masterpieces that transport you to
+                an additional realm. Whether for your home, a cherished gift, or just as an excuse to indulge yourself in something special (because why not!), we create unique digital art that captures the magic in every idea. Let’s come together for
+                this creative experience and craft remarkable art that speaks for itself and tells a heartwarming tale. Ready to step into a world where your imagination is the hero? Let’s work on something extraordinary together!
+
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="section-contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p onclick='window.location.href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtWvNcsMFXZgtqbSfzTPLrjXWsdMWhKmbSTWtzkwnVZPXGQvDLQdrBzxfVNtbSNtKcmFdJ"'>Email: urbankalakari.contact@gmail.com</p>
+            <p onclick='window.location.href="https://www.instagram.com/urbankalakari" '>Instagram: @urbanKalakari</p>
+            <p>Phone: +91 98731 52377</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Urban Kalakari. All rights reserved.</p>
+    </footer>
+
+    <div id="cart-drawer-overlay" onclick="closeCart()"></div>
+    <div id="cart-drawer">
+        <div class="drawer-header">
+            <h3>Your Cart</h3>
+            <button class="close-btn" onclick="closeCart()">✖</button>
+        </div>
+        <ul id="cart-items"></ul>
+        <button id="checkout-btn">Order on WhatsApp</button>
+    </div>
+
+    <button id="backToTop">⇈</button>
+    <script src="cart.js"></script>
+</body>
+
+</html>
