@@ -9,6 +9,10 @@ toggle.addEventListener('click', () => {
     toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+});
+
 // Add to Cart
 document.querySelectorAll('.order-btn').forEach(btn => {
     btn.addEventListener('click', () => {
