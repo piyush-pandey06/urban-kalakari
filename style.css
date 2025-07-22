@@ -1,3 +1,4 @@
+/* === RESET & BASE === */
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +6,35 @@
     scroll-behavior: smooth;
 }
 
-html,
-body {
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+html, body {
     font-family: 'Segoe UI', sans-serif;
     height: 100%;
     overflow-x: hidden;
     scroll-padding-top: 80px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === LOGO === */
 .logo {
     font-size: 2.5rem;
 }
@@ -21,6 +43,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    width: 100%;
 }
 
 .logo-img {
@@ -36,6 +59,15 @@ body {
     letter-spacing: 1px;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* === NAVIGATION === */
 .nav-links {
     list-style: none;
     display: flex;
@@ -55,6 +87,7 @@ body {
     color: #ffcc00;
 }
 
+/* === BUTTON === */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -78,6 +111,7 @@ body {
     transform: scale(0.98);
 }
 
+/* === SECTION LAYOUT === */
 .section {
     display: flex;
     align-items: center;
@@ -86,6 +120,7 @@ body {
     text-align: center;
 }
 
+/* === HEADER === */
 .header-section {
     top: 0;
     left: 0;
@@ -100,6 +135,7 @@ body {
     padding: 1rem 2rem;
 }
 
+/* === HOME SECTION === */
 #home {
     padding-top: 100px;
     position: relative;
@@ -136,22 +172,15 @@ body {
 }
 
 @keyframes homeSlideshow {
-    0%,
-    33%,
-    66%,
-    100% {
+    0%, 33%, 66%, 100% {
         background-image: url('img/urban kalakari logo.jpg');
     }
 }
 
-
-/* Posters Section */
-
+/* === POSTERS SECTION === */
 #posters {
     position: relative;
     padding: 60px 0;
-    margin: 0;
-    width: 100%;
     background-color: #f4f4f4;
     z-index: 1;
 }
@@ -171,18 +200,10 @@ body {
 }
 
 @keyframes slideshow {
-    0% {
-        background-image: url('img/shinchan.jpg');
-    }
-    33% {
-        background-image: url('img/spiderman.jpg');
-    }
-    66% {
-        background-image: url('img/thor.jpg');
-    }
-    100% {
-        background-image: url('img/shinchan.jpg');
-    }
+    0% { background-image: url('img/shinchan.jpg'); }
+    33% { background-image: url('img/spiderman.jpg'); }
+    66% { background-image: url('img/thor.jpg'); }
+    100% { background-image: url('img/shinchan.jpg'); }
 }
 
 #posters h2 {
@@ -197,55 +218,6 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 20px;
     padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: start;
-    justify-items: start;
-}
-
-.category-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.category-grid .poster-card {
-    width: 140px;
-    /* smaller width */
-    padding: 8px;
-}
-
-.category-grid .poster-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.category-grid .poster-info {
-    padding: 8px;
-}
-
-.category-grid .poster-title {
-    font-size: 14px;
-    margin-bottom: 6px;
-}
-
-.category-grid .order-btn,
-.category-grid .view-btn {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-    border-radius: 4px;
-}
-
-@media (min-width: 1200px) {
-    .poster-grid {
-        grid-template-columns: repeat(9, 1fr);
-    }
 }
 
 .poster-card {
@@ -256,19 +228,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 180px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .poster-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.poster-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
 }
 
 .poster-info {
@@ -296,18 +261,7 @@ body {
     margin-bottom: 12px;
 }
 
-.order-btn {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.view-btn {
+.order-btn, .view-btn {
     background-color: #ff6b6b;
     color: white;
     border: none;
@@ -322,9 +276,7 @@ body {
     background-color: #e04e4e;
 }
 
-
-/* About Section */
-
+/* === ABOUT SECTION === */
 #about {
     position: relative;
     overflow: hidden;
@@ -348,17 +300,12 @@ body {
 }
 
 @keyframes aboutSlideshow {
-    0%,
-    33%,
-    66%,
-    100% {
+    0%, 33%, 66%, 100% {
         background-image: url('img/urban kalakari logo.jpg');
     }
 }
 
-
-/* Contact & Footer */
-
+/* === CONTACT & FOOTER === */
 #contact {
     background: #333;
     color: #fff;
@@ -372,9 +319,7 @@ footer {
     font-size: 0.9rem;
 }
 
-
-/* Back To Top */
-
+/* === BACK TO TOP === */
 #backToTop {
     position: fixed;
     bottom: 30px;
@@ -396,11 +341,8 @@ footer {
     background: #ff5722;
 }
 
-
-/* Cart Drawer */
-
-#cart-drawer,
-#cart-popup {
+/* === CART DRAWER === */
+#cart-drawer, #cart-popup {
     position: fixed;
     z-index: 1000;
     background: white;
@@ -414,24 +356,6 @@ footer {
     right: 30px;
     padding: 15px;
     width: 250px;
-}
-
-#cart-popup ul {
-    list-style: none;
-    padding: 0;
-    max-height: 150px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-#cart-popup ul li {
-    margin-bottom: 5px;
-    font-size: 0.95rem;
-}
-
-#cart-popup h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
 }
 
 #cart-drawer {
@@ -525,9 +449,7 @@ footer {
     cursor: pointer;
 }
 
-
-/* Dark Mode Styles */
-
+/* === DARK MODE === */
 body.dark {
     background-color: #121212;
     color: #f1f1f1;
@@ -540,10 +462,6 @@ body.dark .main-header {
 body.dark .logo-text,
 body.dark .nav-links li a {
     color: #f1f1f1;
-}
-
-body.dark .nav-links li a:hover {
-    color: #ffcc00;
 }
 
 body.dark .poster-card {
@@ -584,85 +502,94 @@ body.dark .btn:hover {
     background-color: #777;
 }
 
+/* === RESPONSIVE MEDIA QUERIES === */
 @media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links.open {
+        max-height: 400px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     .logo-text {
         font-size: 1.5rem;
     }
-    .nav-links li a {
-        font-size: 1.2rem;
-    }
-    #home .content {
-        padding: 1.5rem;
-    }
+
     .poster-grid {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
-    .poster-title {
-        font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 50px;
     }
-    .poster-price,
-    .poster-rating {
-        font-size: 0.9rem;
+
+    .logo-text {
+        font-size: 1.2rem;
     }
+
+    .section {
+        padding: 60px 10px;
+    }
+
+    .poster-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .btn,
     .order-btn,
     .view-btn {
-        padding: 8px 12px;
-        font-size: 0.75rem;
+        padding: 10px 16px;
+        font-size: 0.8rem;
     }
+
     #cart-popup {
         width: 220px;
         right: 20px;
         bottom: 70px;
     }
+
     #cart-drawer {
-        width: 260px;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 60%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        transition: bottom 0.3s ease-in-out;
     }
+
     .cart-icon-container {
         font-size: 28px;
         right: 20px;
         top: 16px;
     }
+
     .cart-counter {
         font-size: 12px;
         padding: 2px 5px;
     }
-}
 
-@media (max-width: 480px) {
-    .logo {
-        font-size: 2rem;
-    }
-    .logo-img {
-        height: 50px;
-    }
-    .logo-text {
-        font-size: 1.2rem;
-    }
-    .section {
-        padding: 60px 10px;
-    }
-    .poster-grid,
-    .category-grid {
-        gap: 10px;
-        padding: 10px;
-    }
-    .category-grid .poster-card {
-        width: 100px;
-    }
-    .poster-card {
-        border-radius: 6px;
-    }
-    .poster-info {
-        padding: 10px;
-    }
-    .order-btn,
-    .view-btn {
-        font-size: 0.7rem;
-        padding: 6px 10px;
-    }
     footer {
         font-size: 0.8rem;
     }
+
     #backToTop {
         width: 40px;
         height: 40px;
